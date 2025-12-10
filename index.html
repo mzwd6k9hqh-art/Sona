@@ -7,4 +7,232 @@
   <h1>Welcome to Sona</h1>
   <p>Your digital store for growth and success.</p>
 </body>
+</html
+ <!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sona — Business Helper</title>
+  <meta name="description" content="Sona Business Helper — lightweight tools for store owners and creators: analyzer, generator, solver, audience insights." />
+  <link rel="manifest" href="/manifest.json" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <h1>Sona — Business Helper</h1>
+      <p class="tag">Tools to analyze, generate, and solve — fast.</p>
+    </div>
+    <nav class="nav">
+      <button data-section="analyzer" class="nav-btn active">Analyzer</button>
+      <button data-section="generator" class="nav-btn">Content</button>
+      <button data-section="solver" class="nav-btn">Problem Solver</button>
+      <button data-section="insights" class="nav-btn">Customer Insights</button>
+      <button data-section="about" class="nav-btn">About</button>
+    </nav>
+  </header>
+
+  <main class="main">
+    <section id="analyzer" class="section active">
+      <h2>Business Analyzer</h2>
+      <p>Paste your product/store description and get quick improvement suggestions.</p>
+      <textarea id="analyzer-input" placeholder="Paste product or store description..."></textarea>
+      <div class="row">
+        <button id="analyze-btn" class="primary">Analyze</button>
+        <button id="clear-analyzer">Clear</button>
+      </div>
+      <div id="analyze-output" class="output" aria-live="polite"></div>
+    </section>
+
+    <section id="generator" class="section">
+      <h2>Content Generator</h2>
+      <p>Create headlines, product descriptions, or social captions in seconds.</p>
+      <select id="gen-type">
+        <option value="headline">Headline</option>
+        <option value="description">Short Description</option>
+        <option value="caption">Social Caption</option>
+      </select>
+      <input id="gen-topic" placeholder="Product name or topic" />
+      <div class="row">
+        <button id="generate-btn" class="primary">Generate</button>
+        <button id="copy-gen">Copy</button>
+      </div>
+      <div id="gen-output" class="output" aria-live="polite"></div>
+    </section>
+
+    <section id="solver" class="section">
+      <h2>Problem Solver</h2>
+      <p>Choose a common business challenge to get practical steps.</p>
+      <select id="problem-select">
+        <option value="traffic">Low Traffic</option>
+        <option value="conversion">Low Conversion</option>
+        <option value="branding">Weak Brand</option>
+        <option value="product">Product Market Fit</option>
+        <option value="pricing">Pricing Issues</option>
+      </select>
+      <div class="row">
+        <button id="solve-btn" class="primary">Get Solution</button>
+      </div>
+      <div id="solve-output" class="output" aria-live="polite"></div>
+    </section>
+
+    <section id="insights" class="section">
+      <h2>Customer Insights Helper</h2>
+      <p>Enter a short description of your target audience and get positioning tips.</p>
+      <input id="audience-input" placeholder="e.g. young freelancers, 20-30, remote workers" />
+      <div class="row">
+        <button id="insights-btn" class="primary">Get Insights</button>
+      </div>
+      <div id="insights-output" class="output" aria-live="polite"></div>
+    </section>
+
+    <section id="about" class="section">
+      <h2>About Sona Business Helper</h2>
+      <p>This lightweight app provides practical, ready-to-use tools for creators and business owners: a quick analyzer, a content generator, problem-solving guidance, and audience insight tips — all client-side for privacy and speed.</p>
+      <ul>
+        <li>No sign-up required</li>
+        <li>Works offline once loaded (client-side)</li>
+        <li>Embed-ready for Whop (iframe friendly)</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <small>© Sona • Where Digital Meets Luxury — Built for results.</small>
+  </footer>
+
+  <script src="/app.js"></script>
+</body>
 </html>
+:root{--bg:#0f1724;--card:#0b1220;--accent:#f5c76b;--muted:#9aa7b2;--glass:rgba(255,255,255,0.03)}
+*{box-sizing:border-box;font-family:Inter,ui-sans-serif,system-ui,Helvetica,Arial;margin:0}
+body{background:linear-gradient(180deg,#071020 0%, #0f1724 100%);color:#e6eef6;min-height:100vh;display:flex;flex-direction:column}
+.site-header{display:flex;align-items:center;justify-content:space-between;padding:18px 24px;border-bottom:1px solid rgba(255,255,255,0.04)}
+.brand h1{font-size:20px;margin-bottom:4px}
+.tag{color:var(--muted);font-size:13px}
+.nav .nav-btn{background:transparent;border:0;color:var(--muted);padding:8px 12px;margin-left:6px;border-radius:8px;cursor:pointer}
+.nav .nav-btn.active{color:#fff;background:linear-gradient(90deg, rgba(245,199,107,0.12), rgba(245,199,107,0.06));box-shadow:0 4px 18px rgba(0,0,0,0.5)}
+.main{padding:24px;flex:1;display:block;max-width:960px;margin:20px auto;width:95%}
+.section{display:none;background:var(--card);padding:18px;border-radius:12px;box-shadow:0 8px 30px rgba(2,6,23,0.6);margin-bottom:18px}
+.section.active{display:block}
+h2{margin-bottom:8px}
+textarea,input,select{width:100%;padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:var(--glass);color:inherit;margin-top:8px}
+.row{display:flex;gap:10px;margin-top:12px}
+.primary{background:var(--accent);border:0;color:#04121a;padding:10px 14px;border-radius:8px;cursor:pointer}
+.output{margin-top:14px;background:rgba(255,255,255,0.02);padding:12px;border-radius:8px;color:inherit;min-height:60px;white-space:pre-wrap}
+.footer{text-align:center;padding:12px;color:var(--muted);font-size:13px}
+@media(min-width:900px){.nav .nav-btn{margin-left:12px}}
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.nav-btn').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      document.querySelectorAll('.nav-btn').forEach(b=>b.classList.remove('active'));
+      btn.classList.add('active');
+      const sec = btn.getAttribute('data-section');
+      document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
+      document.getElementById(sec).classList.add('active');
+    });
+  });
+
+  document.getElementById('analyze-btn').addEventListener('click', ()=> {
+    const text = document.getElementById('analyzer-input').value.trim();
+    const out = document.getElementById('analyze-output');
+    if(!text){ out.textContent = "Please enter a description to analyze."; return; }
+    out.textContent = analyzeText(text);
+  });
+  document.getElementById('clear-analyzer').addEventListener('click', ()=> {
+    document.getElementById('analyzer-input').value=''; document.getElementById('analyze-output').textContent='';
+  });
+
+  document.getElementById('generate-btn').addEventListener('click', ()=>{
+    const type = document.getElementById('gen-type').value;
+    const topic = document.getElementById('gen-topic').value.trim();
+    const out = document.getElementById('gen-output');
+    if(!topic){ out.textContent = "Enter a product name or topic."; return; }
+    out.textContent = generateContent(type, topic);
+  });
+  document.getElementById('copy-gen').addEventListener('click', ()=>{
+    const txt = document.getElementById('gen-output').textContent;
+    if(txt) navigator.clipboard.writeText(txt);
+  });
+
+  document.getElementById('solve-btn').addEventListener('click', ()=>{
+    const val = document.getElementById('problem-select').value;
+    document.getElementById('solve-output').textContent = getSolution(val);
+  });
+
+  document.getElementById('insights-btn').addEventListener('click', ()=>{
+    const aud = document.getElementById('audience-input').value.trim();
+    const out = document.getElementById('insights-output');
+    if(!aud){ out.textContent = "Enter a brief audience description."; return; }
+    out.textContent = getInsights(aud);
+  });
+});
+
+function analyzeText(text){
+  const len = text.length;
+  let suggestions = [];
+  if(len < 80) suggestions.push("- Add more detail: benefits, who it's for, and a key result.");
+  if(!/you/gi.test(text)) suggestions.push("- Use direct voice: speak to the customer (use 'you').");
+  if(!/free|bonus|limited|new/gi.test(text)) suggestions.push("- Add a clear value or incentive.");
+  if(/I will|guarantee|make you/gi.test(text)) suggestions.push("- Avoid absolute promises; make statements realistic.");
+  if(suggestions.length===0) suggestions.push("Looks good: clear, benefit-focused, and ready to publish.");
+  return "Analysis:\n" + suggestions.join("\n");
+}
+
+function generateContent(type, topic){
+  const t = topic.trim();
+  if(type==='headline') return `Unlock ${t}: Proven tools to level up your work.`;
+  if(type==='description') return `${t} — practical, ready-to-use templates and guides designed to save time and boost results.`;
+  if(type==='caption') return `Create faster with ${t} — templates, tips, and tools to move you forward. #Sona`;
+  return "";
+}
+
+function getSolution(key){
+  const map = {
+    traffic: "1) Review your top channels. 2) Create 3 short promos. 3) Share in communities. 4) Test lightweight ads.",
+    conversion: "1) Simplify checkout. 2) Add clear benefits above the fold. 3) Use social proof (testimonials). 4) Offer a low-risk trial.",
+    branding: "1) Define your unique voice. 2) Use consistent visuals. 3) Share case studies. 4) Optimize your hero message.",
+    product: "1) Collect user feedback. 2) Run small paid test offers. 3) Iterate the offer. 4) Narrow target audience.",
+    pricing: "1) Test tiered pricing. 2) Offer entry-level product. 3) Highlight ROI. 4) Use limited-time discounts."
+  };
+  return map[key] || "Try another option.";
+}
+
+function getInsights(aud){
+  return `Targeting: ${aud}\n\nTips:\n- Clarify top pain point.\n- Use 1 sentence value message.\n- Offer a small entry product to build trust.\n- Promote where your audience already is.`;
+}
+    {
+  "name": "Sona Business Helper",
+  "short_name": "SonaHelper",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#071020",
+  "theme_color": "#0f1724"
+}
+    {
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Frame-Options", "value": "ALLOWALL" },
+        { "key": "Content-Security-Policy", "value": "frame-ancestors *" }
+      ]
+    }
+  ]
+}
+    # Sona Business Helper (simple client-side app)
+Files:
+- index.html
+- style.css
+- app.js
+- manifest.json
+- vercel.json
+
+Deploy:
+1. Push repo to GitHub.
+2. On Vercel: New Project → Import GitHub repo → Deploy.
+3. After deployment copy Production URL (https://your-app.vercel.app).
+4. In Whop Developer App settings set Base URL = production URL.
+5. Leave Redirect URL empty (no OAuth).
+6. Ensure 2FA enabled on Whop account before interacting with Developer features.
