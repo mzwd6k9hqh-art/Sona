@@ -1,0 +1,8 @@
+{
+  "name": "Sona Business Helper",
+  "short_name": "SonaHelper",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#071020",
+  "theme_color": "#0f1724"
+}
