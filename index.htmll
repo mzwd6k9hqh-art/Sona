@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sona — Business Helper</title>
+  <meta name="description" content="Sona Business Helper — lightweight tools for store owners and creators: analyzer, generator, solver, audience insights." />
+  <link rel="manifest" href="/manifest.json" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <h1>Sona — Business Helper</h1>
+      <p class="tag">Tools to analyze, generate, and solve — fast.</p>
+    </div>
+    <nav class="nav">
+      <button data-section="analyzer" class="nav-btn active">Analyzer</button>
+      <button data-section="generator" class="nav-btn">Content</button>
+      <button data-section="solver" class="nav-btn">Problem Solver</button>
+      <button data-section="insights" class="nav-btn">Customer Insights</button>
+      <button data-section="about" class="nav-btn">About</button>
+    </nav>
+  </header>
+
+  <main class="main">
+    <section id="analyzer" class="section active">
+      <h2>Business Analyzer</h2>
+      <p>Paste your product/store description and get quick improvement suggestions.</p>
+      <textarea id="analyzer-input" placeholder="Paste product or store description..."></textarea>
+      <div class="row">
+        <button id="analyze-btn" class="primary">Analyze</button>
+        <button id="clear-analyzer">Clear</button>
+      </div>
+      <div id="analyze-output" class="output" aria-live="polite"></div>
+    </section>
+
+    <section id="generator" class="section">
+      <h2>Content Generator</h2>
+      <p>Create headlines, product descriptions, or social captions in seconds.</p>
+      <select id="gen-type">
+        <option value="headline">Headline</option>
+        <option value="description">Short Description</option>
+        <option value="caption">Social Caption</option>
+      </select>
+      <input id="gen-topic" placeholder="Product name or topic" />
+      <div class="row">
+        <button id="generate-btn" class="primary">Generate</button>
+        <button id="copy-gen">Copy</button>
+      </div>
+      <div id="gen-output" class="output" aria-live="polite"></div>
+    </section>
+
+    <section id="solver" class="section">
+      <h2>Problem Solver</h2>
+      <p>Choose a common business challenge to get practical steps.</p>
+      <select id="problem-select">
+        <option value="traffic">Low Traffic</option>
+        <option value="conversion">Low Conversion</option>
+        <option value="branding">Weak Brand</option>
+        <option value="product">Product Market Fit</option>
+        <option value="pricing">Pricing Issues</option>
+      </select>
+      <div class="row">
+        <button id="solve-btn" class="primary">Get Solution</button>
+      </div>
+      <div id="solve-output" class="output" aria-live="polite"></div>
+    </section>
+
+    <section id="insights" class="section">
+      <h2>Customer Insights Helper</h2>
+      <p>Enter a short description of your target audience and get positioning tips.</p>
+      <input id="audience-input" placeholder="e.g. young freelancers, 20-30, remote workers" />
+      <div class="row">
+        <button id="insights-btn" class="primary">Get Insights</button>
+      </div>
+      <div id="insights-output" class="output" aria-live="polite"></div>
+    </section>
+
+    <section id="about" class="section">
+      <h2>About Sona Business Helper</h2>
+      <p>This lightweight app provides practical, ready-to-use tools for creators and business owners: a quick analyzer, a content generator, problem-solving guidance, and audience insight tips — all client-side for privacy and speed.</p>
+      <ul>
+        <li>No sign-up required</li>
+        <li>Works offline once loaded (client-side)</li>
+        <li>Embed-ready for Whop (iframe friendly)</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <small>© Sona • Where Digital Meets Luxury — Built for results.</small>
+  </footer>
+
+  <script src="/app.js"></script>
+</body>
+</html>
