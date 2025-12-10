@@ -105,24 +105,6 @@
   <script src="/app.js"></script>
 </body>
 </html>
-:root{--bg:#0f1724;--card:#0b1220;--accent:#f5c76b;--muted:#9aa7b2;--glass:rgba(255,255,255,0.03)}
-*{box-sizing:border-box;font-family:Inter,ui-sans-serif,system-ui,Helvetica,Arial;margin:0}
-body{background:linear-gradient(180deg,#071020 0%, #0f1724 100%);color:#e6eef6;min-height:100vh;display:flex;flex-direction:column}
-.site-header{display:flex;align-items:center;justify-content:space-between;padding:18px 24px;border-bottom:1px solid rgba(255,255,255,0.04)}
-.brand h1{font-size:20px;margin-bottom:4px}
-.tag{color:var(--muted);font-size:13px}
-.nav .nav-btn{background:transparent;border:0;color:var(--muted);padding:8px 12px;margin-left:6px;border-radius:8px;cursor:pointer}
-.nav .nav-btn.active{color:#fff;background:linear-gradient(90deg, rgba(245,199,107,0.12), rgba(245,199,107,0.06));box-shadow:0 4px 18px rgba(0,0,0,0.5)}
-.main{padding:24px;flex:1;display:block;max-width:960px;margin:20px auto;width:95%}
-.section{display:none;background:var(--card);padding:18px;border-radius:12px;box-shadow:0 8px 30px rgba(2,6,23,0.6);margin-bottom:18px}
-.section.active{display:block}
-h2{margin-bottom:8px}
-textarea,input,select{width:100%;padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:var(--glass);color:inherit;margin-top:8px}
-.row{display:flex;gap:10px;margin-top:12px}
-.primary{background:var(--accent);border:0;color:#04121a;padding:10px 14px;border-radius:8px;cursor:pointer}
-.output{margin-top:14px;background:rgba(255,255,255,0.02);padding:12px;border-radius:8px;color:inherit;min-height:60px;white-space:pre-wrap}
-.footer{text-align:center;padding:12px;color:var(--muted);font-size:13px}
-@media(min-width:900px){.nav .nav-btn{margin-left:12px}}
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.nav-btn').forEach(btn=>{
     btn.addEventListener('click', ()=>{
